@@ -1,0 +1,80 @@
+Question-2:
+
+
+#include<stdio.h>
+int main()
+{
+    int i,j,p,q,r,sum=0;                           //declaration of variables
+    int a[10][10];           
+    printf("enter the number of row and columns:");
+    scanf("%d %d",&p,&q);                          //scan rows and columns
+    printf("enter the matrix elements:");
+    for(i=0;i<p;i++)                               //get input from user
+    {
+    for(j=0;j<q;j++)
+    {
+    scanf("%d",&a[i][j]);
+    }
+    }
+    printf("enter column number: ");
+    scanf("%d",&p);                                //get the input from user to which column to be added
+    for(i=0;i<p;i++)
+    {
+        for(j=0;j<q;j++)
+        {
+          if(i<p&&j==r)
+          sum=sum+a[i][j];                         //add the elements in r column
+        }
+    }
+    printf("%d",sum);                              //get the final output
+}
+
+
+
+Question-2:
+
+#include <stdio.h>
+#include <stdlib.h>
+int main()
+{
+    int a[3][3],i,j;                               //declaring the variables
+    int sa[10],k=0;
+    printf("Enter elements for 3 * 3 matrix\n");
+    for(i=0;i<3;i++)
+    {
+        for(j=0;j<3;j++)
+        {
+            scanf("%d",&a[i][j]);                  //get the input from user
+            sa[k]=a[i][j];
+            k++;
+
+        }
+    }
+    printf("Matrix Elements are\n");
+    for(i=0;i<3;i++)
+    {
+        for(j=0;j<3;j++)
+        {
+            printf("%d ",a[i][j]);                  //displaying  matrix elements
+        }
+        printf("\n");
+    }
+    printf("Duplicate Array Elements are\n");
+        for(int i=0;i<9; i++)
+    {
+        for(int j=i+1;j<9;j++)
+        {
+            if(sa[i] == sa[j])                      //find the duplicate element by comparing
+            {
+                printf("%d ", sa[j]);               //get the output
+            }
+        }
+    }
+    return 0;
+}
+
+
+
+   
+
+
